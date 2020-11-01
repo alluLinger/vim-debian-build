@@ -25,7 +25,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: clone and build vim
         run: |
-          apt install git
+          apt-get update
+          apt-get install -y git
+          apt-get install -y build-essential gcc g++ make python python3 python-dev python3-dev lua5.3 lua5.3-dev
           git clone https://github.com/vim/vim
           cd vim
           ./configure
