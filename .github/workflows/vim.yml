@@ -44,9 +44,9 @@ jobs:
             --prefix=/home/runner/work/vim-debian-build/vim-debian-bin
           make
           sudo make install
-          tar -zcvf vim.tar.gz /home/runner/work/vim-debian-build/vim-debian-bin
+          tar -zcvf /home/runner/work/vim.tar.gz /home/runner/work/vim-debian-build/vim-debian-bin
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
           name: vim.tar.gz
-          path: vim.tar.gz
+          path: /home/runner/work/vim.tar.gz
